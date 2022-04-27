@@ -11,3 +11,5 @@ This is for Conflict Resolving edit.
 This is final conflict from local side.
 
 BOX localllllll.
+
+This is final conflict from remote side.
