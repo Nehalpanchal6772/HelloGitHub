@@ -1,0 +1,48 @@
+Commit: (SAVE)
+-- commit comment
+-- committer
+-- date
+-- parent commit (Previous file of current)
+
+Branch: different individual copies of the main repo for the different developers to work on.
+
+Clone: (COPY OF REPO IN LOCAL MACHINE)
+COMMAND: git clone <link of repo>
+
+------------------------------------ THREE STAGES OF GIT ---------------------------------------
+
+1) WORKING: local file on which we are working on the local machine (on which we are working and changing) (MODIFICATION IN RED COLOR--LOCAL FILE STATUS)
+
+2) STAGING INDEX: Staging area on which 3 files are ready to commit or stored on main repo from a total of 10 files. (Remaining 7 files are still in working mode and not ready to commit)
+COMMAND: <git add> (FROM working stage to Staging Index) (MODIFICATION IN GREEN COLOR--TEMPORARY CHANGES)
+
+3) REPOSITORY: (Main repo on the cloud)
+COMMAND: <git commit> (file move from Staging Index to main Repository)
+
+--------------------------- COMMANDS ------------------------------
+
+1. git clone <repo link>  --> Generate copy of main repo into local machine
+2. git add <file name> --> from working area to staging area (Temporary save) (STAGING COMMAND)
+3. git commit --> from working area to main repository
+4. git status --> know the current status of repo (changes of repo)
+5. git diff (difference <change in line>) --> (information of ADD <+:Green> and DELETE <-:Red> the line in repo file) (Show difference betweek working area and staging area)
+6. git reset HEAD <filename> --> from staging index to working area (UNSTAGING)
+7. git add . --> all files are saved from working area to index area
+8. git push --> from local to cloud changes using RSA public and private key
+9. git log --> Show different cimmit details (id,name,message and date) (Parent commit means previous commit)
+10. git checkout -b <branch-name> --> to create new branch.
+11. git checkout <branch-name> --> switch among different branches.
+12. git commit -m <"commit message"> --> direct give commit message.
+13. git branch --> list all created branch in repo including main branch.
+
+14. git fetch --> (From server to local pointers update) (do not apply anything in local files from server)
+15. git pull --> (combination of fetch + merge) (first fetch the changes and then apply the changes to local files) (Update the local file using fetched data)
+16. git merge <origin/main> --> from origin/main to local file update.
+
+====> Either direct 'PULL command' or use 'fetch' and then 'merge command'.
+
+17. git commit -a -m <"Commit message"> --> First add from working to staging area (-a) and then commit with the message (Combination of ADD + COMMIT with message command)
+
+====> Either direct ' git commit -a -m <"Commit message"> command' or use 'git add' and then 'commit command'.
+
+18. Resolving conflict: second push is now allowed when first push is already made on main repo. First have to PULL that first push into local file and then PUSH to the main repo.
